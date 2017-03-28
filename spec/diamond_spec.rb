@@ -19,6 +19,12 @@ RSpec.describe "Diamond" do
     expect(drawing).to eq(three_letters_diamond)
   end
 
+  it "draws the four letters diamond" do
+    drawing = diamond_for('D')
+
+    expect(drawing).to eq(four_letters_diamond)
+  end
+
   def minimum_diamond
     <<~EOD
     A
@@ -40,6 +46,18 @@ RSpec.describe "Diamond" do
     C   C
      B B
       A
+    EOD
+  end
+
+  def four_letters_diamond
+    <<~EOD
+       A
+      B B
+     C   C
+    D     D
+     C   C
+      B B
+       A
     EOD
   end
 end
